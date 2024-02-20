@@ -7,7 +7,7 @@ def test():
         return 0;
     finally:
          print("always execute")
-
+        
 
 x = test()
 print(x)
