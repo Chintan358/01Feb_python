@@ -120,3 +120,4 @@ for col in cols:
 show()
 table.bind('<Double-Button-1>',getdata)
 root.mainloop()
+
