@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/static/style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Home</h1>
+
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+
+
+
+        {%for i in names%}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+        </tr>
+        {%endfor%}
+
+    </table>
+
+    <h1><a href="reg">Registration</a></h1>
+
+    <h2><a href="mysite/home">Mysite</a></h2>
+</body>
+
+</html>
