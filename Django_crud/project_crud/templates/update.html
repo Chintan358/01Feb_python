@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Update form</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+      {%csrf_token%}
+      <input
+        type="text"
+        name="uname"
+        value="{{data.uname}}"
+        placeholder="Enter Username"
+      /><br />
+
+      <input
+        type="text"
+        name="email"
+        value="{{data.email}}"
+        placeholder="Enter Email"
+      /><br />
+
+      <input
+        type="password"
+        name="password"
+        value="{{data.password}}"
+        placeholder="Enter password"
+      /><br />
+
+      <label for="">Gender</label>
+      <input type="radio" value="male" name="gender" checked />Male
+      <input type="radio" value="female" name="gender" />Female <br />
+
+      <label for="">Languages</label>
+      <input type="checkbox" value="gujarati" name="lng" />Gujarati
+      <input type="checkbox" value="hindi" name="lng" />Hindi
+      <input type="checkbox" value="english" name="lng" />English <br />
+
+      <label for="">Country</label>
+      <select name="country" id="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option></select
+      ><br />
+
+      <img
+        src="/media/{{data.img}}"
+        alt="{{data.img}}"
+        height="50px"
+        width="50px"
+      />
+      <input type="file" name="img" />
+      <br />
+
+      <input type="submit" />
+    </form>
+
+    <br />
+    <br />
+  </body>
+</html>

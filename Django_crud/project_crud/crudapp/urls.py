@@ -23,7 +23,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
-    path('reg',views.registration)
+    path('reg',views.registration,name="reg"),
+    path('delete/<id>',views.delete),
+    path('edit/<id>',views.edit)
 ]
 
 if settings.DEBUG:
