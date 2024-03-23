@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL='myapp.CustomeUser'
 
 # Application definition
 
@@ -37,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crudapp'
+    'crudapp',
+    'myapp'
 ]
 
 MIDDLEWARE = [

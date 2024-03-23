@@ -21,13 +21,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',views.userRegistration,name="ureg"),
-    path('login',views.userLogin,name="ulogin"),
-    path('reg',views.registration,name="reg"),
-    path('delete/<id>',views.delete),
-    path('edit/<id>',views.edit),
-    path('logout',views.userLogout,name="logout")
+    # path('admin/', admin.site.urls),
+    # path('',views.userRegistration,name="ureg"),
+    # path('login',views.userLogin,name="ulogin"),
+    # path('reg',views.registration,name="reg"),
+    # path('delete/<id>',views.delete),
+    # path('edit/<id>',views.edit),
+    # path('logout',views.userLogout,name="logout")
 ]
 
 if settings.DEBUG:
