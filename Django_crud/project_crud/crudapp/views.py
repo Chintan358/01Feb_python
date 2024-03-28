@@ -1,6 +1,6 @@
 # from django.shortcuts import render,redirect
 # from .models import Student
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 # from django.contrib.auth import authenticate,login,logout
 # import os
 # from django.contrib import messages
