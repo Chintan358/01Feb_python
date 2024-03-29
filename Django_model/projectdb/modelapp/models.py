@@ -14,3 +14,5 @@ class Employee(models.Model):
     email=models.EmailField(max_length=50)
     phone=models.CharField(max_length=30)
     salary=models.IntegerField(default=0)
+
+    

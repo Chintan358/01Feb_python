@@ -1,0 +1,45 @@
+ORDERBY : 
+*****************
+model.objects.all().order_by('fieldname')
+
+LIMIT : 
+
+model.objects.all()[0,0]
+
+
+FILTER : 
+
+model.objects.filter(fieldname = '')
+model.objects.exclue(fieldname = '')
+
+
+__gte
+__gt
+__lte
+__lt
+__startwith
+__endswith
+__icontains
+__in
+
+
+Count()
+Exists()
+values()
+reverse()
+values_list()
+
+Aggregation & Annotation function
+
+model.objects.aggregate(Avg(fieldname))
+
+Max
+min
+sum
+
+
+
+
+
+
+
