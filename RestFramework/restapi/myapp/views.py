@@ -5,7 +5,10 @@ from .models import Student
 from .serialzer import *
 from rest_framework.views import APIView
 # Create your views here.
+from rest_framework_simplejwt.tokens import RefreshToken
 
+
+from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 
@@ -15,8 +18,11 @@ class RregisterUser(APIView):
         if not user.is_valid():
                 return Response({'status':'202','errors':user.errors,'message':"something went wrong"})
         user.save()
+        udata = User.objects.get(username=request.data['username'])
+        refresh = RefreshToken.for_user(udata)
         
-        return Response({"data":user.data,"message":"Student inserted"})
+        return Response({"data":user.data, 'refresh': str(refresh),
+        'access': str(refresh.access_token),"message":"Student inserted"})
 
 
 
@@ -60,7 +66,10 @@ class StudentAPI(APIView):
 
 
 class ProductAPI(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
     def get(self,request):
+        print(request.user)
         prodata = Product.objects.all()
         seralizer = ProductSerializer(prodata,many=True)
         return Response({'apidata':seralizer.data})
