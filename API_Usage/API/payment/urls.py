@@ -20,6 +20,7 @@ from  payment import views
 
 urlpatterns = [
     
-    path('',views.pay,name="payment")
+    path('',views.payment,name="payment"),
+    path('pay/<amt>',views.pay,name="pay")
 
 ]
