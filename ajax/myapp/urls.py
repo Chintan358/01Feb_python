@@ -20,5 +20,9 @@ from .views import *
 urlpatterns = [
     path("",index,name="index"),
     path("display/",display,name="display"),
-    path("adduser",adduser,name="adduser")
+    path("adduser",adduser,name="adduser"),
+    path("delete/",delete,name="delete"),
+    path("edit/",edit,name="edit"),
+    path("update",update,name="update"),
+    path("search",search,name="search")
 ]
